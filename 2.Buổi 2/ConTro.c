@@ -112,8 +112,65 @@ void SizeContro()
 	printf("SizeOf(double*) = %d\n", sizeof(double*));
 	printf("SizeOf(float*) = %d\n", sizeof(float*));
 }
+// tìm số lớn hơn trong 2 số
+// tìm số lớn nhất trong 3 số abc
+void khaiBaoConTro(){
+    int* prt3, a; // ptr3 là con trỏ, nhưng a là biến
+    int* ptr4 = NULL; // con trỏ với địa chỉ là null thfi nó không trỏ đi đâu cả
+    float* ptr2;
+    int b = 5;
+    int c = 7;
+    printf("Gia tri cua bien b: %d\n", b);
+    printf("Dia chi cua bien b co keiu HEX: %p\n", &b); // %p để in ra 1 địa chỉ có kiểu HEX, &b để lấy địa chỉ của biến
+}
+void timSoLonHon(int a, int b){
+    int *pt1;
+    if(a > b){
+        pt1 = &a;
+    }else{
+        pt1 = &b;
+    }
+        printf("So lon hon la: %d", *pt1);
+}
+int timMax(int *a, int *b, int *c){
+    int max;
+    if(*a > *b && *a > *c){
+        max = *a;
+    }else if(*b > max && *b > *c){
+        max = *b;
+    }else{
+        max = *c;
+    }
+    return max;
+}
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+void bubbleSort(int *arrNummber, int n){
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1 - i; j++)
+        {
+            if(arrNummber[j] > arrNummber[j+1]){
+                swap(&arrNummber[j], &arrNummber[j+1]);
+            }
+        }
+    }
+    for (int i = 0; i < n; i++){
+        printf("%5d", arrNummber[i]);
+    }
+}
+
 int main()
 {
-	KhaiBaoConTro();
-	SizeContro();
+	// KhaiBaoConTro();
+	// SizeContro();
+	// int a = 1, b = 2, c = 3;
+    // int max = timMax(&a, &b, &c);
+    // printf("Max la: %d\n", max);
+    int arrNummber[] = {1,3,5,222,1,4,22,2222,1};
+    int n = sizeof(arrNummber) / sizeof(arrNummber[0]);
+    bubbleSort(arrNummber, n);
 }
