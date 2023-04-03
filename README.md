@@ -1,4 +1,4 @@
-Câu 1: Viết ứng dụng quản lý sinh viên sử dụng Struct với các yêu cầu sau: (4 điểm)
+## Câu 1: Viết ứng dụng quản lý sinh viên sử dụng Struct với các yêu cầu sau: (4 điểm)
 <br/>
 a. Thực hiện CRUD một danh sách sinh viên lưu trong 1 mảng chứa các Struct sinh viên (2 điểm)
 <br/>
