@@ -9,8 +9,7 @@
 // Khai báo Struct NhanVien
 typedef struct NhanVien NhanVien;
 
-struct NhanVien
-{
+struct NhanVien{
     int msnv;
     char ho[20];
     char ten[20];
@@ -20,16 +19,15 @@ struct NhanVien
     float luong;
     date ngayvao;
 };
-
 // Khai báo các hàm cần sử dụng
 void menu();
-int main()
-{
+// Main 
+int main(){
     menu();
     getch();
     return 0;
 }
-
+// Code nội dung các hàm 
 void menu(){
     do
     {
